@@ -24,7 +24,7 @@ pipeline {
     stage('error') {
       steps {
         script {
-          sendFeedback.response()
+          response()
         }
 
       }
