@@ -25,7 +25,7 @@ pipeline {
       steps {
         libraryResource 'sendFeedback.groovy'
         script {
-          response()
+          sendFeedback.response()
         }
 
       }
