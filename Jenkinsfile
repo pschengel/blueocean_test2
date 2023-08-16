@@ -16,7 +16,7 @@ pipeline {
     stage('Load Resource') {
       steps {
         library 'testlib'
-        libraryResource 'sendFeedback.groovy'
+        libraryResource 'testlib'
         fileExists 'sendFeedback.groovy'
       }
     }
