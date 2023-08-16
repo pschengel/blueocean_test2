@@ -18,7 +18,7 @@ pipeline {
         library 'testlib'
         libraryResource 'sendFeedback.groovy'
         script {
-          sendFeedback.groovy.httpRequest()
+          testlib.httpRequest()
         }
 
       }
