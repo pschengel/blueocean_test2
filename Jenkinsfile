@@ -17,17 +17,6 @@ pipeline {
       steps {
         library 'testlib'
         libraryResource 'sendFeedback'
-        fileExists 'sendFeedback.groovy'
-      }
-    }
-
-    stage('error') {
-      steps {
-        libraryResource 'sendFeedback.groovy'
-        script {
-          sendFeedback.response()
-        }
-
       }
     }
 
