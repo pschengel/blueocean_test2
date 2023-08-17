@@ -16,6 +16,7 @@ pipeline {
     stage('Load Resource') {
       steps {
         build 'test'
+        waitForBuild(runId: '122121', propagate: true)
       }
     }
 
