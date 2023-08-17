@@ -20,5 +20,18 @@ pipeline {
       }
     }
 
+    stage('testtest') {
+      steps {
+        script {
+          post {
+            always {
+              commonSteps()
+            }
+          }
+        }
+
+      }
+    }
+
   }
 }
