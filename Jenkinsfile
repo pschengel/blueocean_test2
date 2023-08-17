@@ -15,19 +15,9 @@ pipeline {
 
     stage('Load Resource') {
       steps {
-        build 'test'
-        waitForBuild(runId: '122121', propagate: true)
-      }
-    }
-
-    stage('testtest') {
-      steps {
+        library 'testlib'
         script {
-          post {
-            always {
-              commonSteps()
-            }
-          }
+          httpPipeline(requestBody: "{\"result\": \"${currentBuild.result}\", \"message\": \"Your custom message here\"}")
         }
 
       }
