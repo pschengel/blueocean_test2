@@ -15,12 +15,7 @@ pipeline {
 
     stage('Load Resource') {
       steps {
-        library 'testlib'
-        libraryResource 'sendFeedback.groovy'
-        script {
-          testlib.httpRequest()
-        }
-
+        build 'test'
       }
     }
 
